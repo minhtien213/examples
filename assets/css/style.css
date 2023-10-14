@@ -160,7 +160,7 @@
     margin-top: 170px;
     opacity: 0;
     transition: all 0.5s;
-    transition-delay: 0.3s; 
+    transition-delay: 0.2s; 
     /* ngăn giật giật khi hover */
   }
 
@@ -178,6 +178,14 @@
     cursor: pointer;
   }
 
+  .size span.active{
+    background-color: #74e63f;
+  }
+
+  .selected{
+    border: 2px solid #3ae3e6;
+  }
+
 
   .green, .red, .white{
     width: 15px;
@@ -192,7 +200,7 @@
     background-color: green;
   }
   .red{
-    background-color: red;
+    background-color: rgb(233, 40, 117);
   }
   .white{
     background-color: white;
@@ -362,6 +370,7 @@
     font-size: 10px;
     color: #fff;
     margin-left: 3px;
+    cursor: pointer;
   }
 
   .input{
@@ -381,8 +390,407 @@
     background-color: #4264ec;
     padding: 5px 10px;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   .hide{
     display: none;
   }
+
+
+  /* VALIDATE */
+
+  .validate_block{
+    width: 720px;
+    height: auto;
+    margin: auto;
+    background-color: #e5a6e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  form{
+    margin: auto;
+    width: 60%;
+    height: auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+  .form_group{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .form_group.error input{
+    border: 1px solid red;
+  }
+
+  .form_group.error span{
+    color: red;
+  }
+
+  .form_group label{
+    font-size: 14px;
+  }
+
+  .form_group input{
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px;
+    outline: none;  
+  }
+
+  .form_group span{
+    font-size: 10px;
+    font-style: italic;
+  }
+
+
+  .submit_btn{
+    display: flex;
+  }
+
+  .btn_submit{
+    width: 70px;
+    background-color: #85dae7;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+
+  /* TODOLIST */
+
+  .todolist_block{
+    width: 720px;
+    height: auto;
+    margin: auto;
+    background-color: #e9c87c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .todo_form{
+    margin: auto;
+    width: 60%;
+    height: auto;
+    background-color: rgb(82, 129, 170);
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+  .data_form{
+    margin: auto;
+    width: 95%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .data_form .todo_input{
+    width: 85%;
+    margin-right: 10px;
+    padding: 3px 5px;
+    outline: none;
+  }
+
+  .todo_btn{
+    border: none;
+    background-color: #85dae7;
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+
+  .todo_list{
+    margin: auto;
+    width: 95%;
+    background-color: #b1afdc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 3px;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .todo_list li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .todo_list span{
+    padding: 2px 5px;
+    border-bottom: 1px dashed black;
+    min-width: 90%;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ti-trash{
+    color: #d42323;
+  }
+
+  .completed span{
+    color: #5c5858;
+    text-decoration: line-through;
+  }
+
+  .todo_list label{
+    display: none;
+    font-style: italic;
+    font-size: 10px;
+    color: #b0f0aa;
+  }
+  .empty.active{
+    display: block;
+  }
+
+
+/* TOAST BLOCK */
+
+.toast_block{
+  width: 720px;
+  height: auto;
+  margin: auto;
+  background-color: #eb8b61;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.toast_block h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tolast_btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tolast_btn button{
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.success_btn{
+  background-color: #74e63f;
+}
+.warning_btn{
+  background-color: #e6c42b;
+}
+.error_btn{
+  background-color: #e80d0d;
+}
+
+.toast_form{
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+}
+
+.success, .warning, .error_toast{
+  padding: 15px 70px;
+  padding-left: 5px;
+  background-color: #9fcb8a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border-left: 4px solid greenyellow;
+  font-size: 14px;
+  animation: toleft 1s ease-in-out forwards;
+  position: relative;
+}
+
+.process{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #c23564;
+  bottom: 0;
+  left: 0;
+  animation: toright 5s ease-in-out forwards;
+}
+
+@keyframes toright {
+  0%{
+    width: 100%;
+  }
+  100%{
+    width: 0;
+  }
+}
+
+@keyframes toleft {
+  0%{
+    transform: translateX(100%);
+  }
+  25%{
+    transform: translateX(-10px);
+  }
+  50%{
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes toast_hide {
+  0%{
+    transform: translateX(0%);
+  }
+  25%{
+    transform: translateX(-10px);
+  }
+  100%{
+    transform: translateX(120%);
+  }
+}
+
+.warning{
+  background-color: #e2d38d;
+  border-left: 4px solid yellow;
+}
+
+.error_toast{
+  background-color: #eb6f59;
+  border-left: 4px solid red;
+}
+
+.toast_form label{
+  margin-left: 15px;
+}
+
+
+/* CONTACT SEARCH BLOCK */
+
+.contact_search_block{
+  width: 720px;
+  height: auto;
+  margin: auto;
+  background-color: #c47cf4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contact_form{
+  width: 80%;
+  margin: auto;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.header img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.contact_description, .contact_item_info{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_name{
+  color: #b1afdc;
+  font-size: 20px;
+}
+
+.profile_des{
+  font-style: italic;
+  font-size: 12px;
+}
+
+.search_block{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.search_block .search_input{
+  width: 90%;
+  outline: none;
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.list_contacts{
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.list_contacts > div:nth-child(odd){
+  background-color: #edf2f3;
+}
+
+.contact_item{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.contact_item.hidden{
+  display: none;
+}
+
+.contact_item .contact_item_img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact_item_info .contact_item_name{
+  font-size: 17px;
+}
+
+.contact_item_info .contact_item_phone,
+.contact_item_info .contact_item_email{
+  font-style: italic;
+  font-size: 10px;
+  margin-top: 3px;
+}
+

@@ -8,6 +8,51 @@
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
 </head>
 <body>
+
+  <div class="contact_search_block">
+      <div class="contact_form">
+        <div class="header">
+          <img src="./assets/img/nhatban3.jpg" alt="logo" class="profile_img">
+          <div class="contact_description">
+            <span class="profile_name">Minh Tiến</span>
+            <span class="profile_des">My contacts</span>
+          </div>
+        </div>
+        
+        <div class="search_block">
+          <input type="search" class="search_input" placeholder="insert...">
+        </div>
+        
+        <div class="list_contacts">
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="toast_block">
+    <h3>Click button!</h3>
+    <div class="tolast_btn">
+      <button class="success_btn">Success</button>
+      <button class="warning_btn">Warning</button>
+      <button class="error_btn">Error</button>
+    </div>
+    <div class="toast_form">
+    </div>
+  </div>
+
+  <div class="todolist_block">
+    <div class="todo_form">
+      <div class="data_form">
+        <input type="text" class="todo_input" placeholder="insert to do item...">
+        <button class="todo_btn">Add</button>
+      </div>
+      <div class="todo_list">
+        <label class="empty">Danh sách rỗng!</label>
+      </div>
+    </div>
+  </div>
+
+
     <div class="tabs_ui">
       <h1 style="margin-bottom: 10px;">TABS_UI</h1>
         <!-- Tab items -->
@@ -63,7 +108,7 @@
             <i class="ti-shopping-cart"></i>
           </div>
           <div class="card__image">
-            <img src="./assets/img/194-1944356_nike-free-x-metcon-red-hd-png-download.png" alt="">
+            <img src="./assets/img/green_shoes.png" alt="">
           </div>
           <div class="name_price">
             <h3>Nike Sport Shoes</h3>
@@ -72,14 +117,17 @@
           <div class="info_shoes">
             <div class="size">
               <h4>Size:</h4>
-              <span>6</span>
-              <span>7</span>
-              <span>8</span>
-              <span>9</span>
+              <span>36</span>
+              <span>37</span>
+              <span>38</span>
+              <span>39</span>
+              <span class="active">40</span>
+              <span>41</span>
+              <span>42</span>
             </div>
             <div class="color">
               <span>Color:</span>
-              <span class="green"></span>
+              <span class="green selected"></span>
               <span class="red"></span>
               <span class="white"></span>
             </div>
@@ -137,6 +185,36 @@
         <button class="remove_all hide">Remove all</button>
       </div>
     </div>
+
+
+    <div class="validate_block">
+      <form action="submit" class="form">
+        <div class="form_group">
+          <label for="username" class="username_label">Username:</label>
+          <input type="text" id="username">
+          <span class="error"></span>
+        </div>
+        <div class="form_group">
+          <label for="email" class="email_label">Email:</label>
+          <input type="text" id="email">
+          <span class="error"></span>
+        </div>
+        <div class="form_group">
+          <label for="password" class="password_label">Password:</label>
+          <input type="text" id="password">
+          <span class="error"></span>
+        </div>
+        <div class="form_group">
+          <label for="password_confirm" class="password_confirm_label">Confirm passwolrd:</label>
+          <input type="text" id="password_confirm">
+          <span class="error"></span>
+        </div>
+        <div class="submit_btn">
+          <button class="btn_submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
 
     <script type="text/javascript" src="./script.js"></script>
 </body>
